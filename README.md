@@ -1,22 +1,22 @@
 # Happy-Birthday-Design
- Overview
+ Overview:
  The Happy Birthday Design Problem aims to implement a simple digital system comprising a
  Transmitter and Receiver. The system transmits a randomly generated bit stream and the
  receiver detects your date of birth in the sequence and displays the number of times it is
  detected on a seven segment display.
 
-  Architecture
- Example
+  Architecture:
+ [Example:
  Encodes the month number (1–12)
  Encodes the date (1–31)
  Combined sequence (Month + Date)
  July = 0111
  10 = 01010
- 011101010
+ 011101010]
  The system contains two major blocks, the data generator & transmitter and the detector &
  BCDencoder. The system operates on a 10KHz clock source common for trans-receive
  blocks.
- TRANSMITTER
+ TRANSMITTER:
  The Transmitter Block generates 10-bit data words and transmits them serially at a defined
  rate using the system clock.– Generator: A 10-bit counter acts as the data source, producing values from 0 to
  1023. The counter increments once per completed transmission, ensuring that a new
@@ -26,10 +26,6 @@
  significant bit (LSB). The transmitter therefore outputs a continuous serial stream
  synchronized with the 10 kHz system clock.
  Control Flow:
- 1.
- 2.
- 3.
- 4.
  When i_tx_ena_n is low, transmission is active.
  The transmitter shifts out 10 bits, one per clock, on its output line.
  After 10 cycles, a tx_done pulse signals completion.
@@ -41,7 +37,7 @@
  · Framerate: 1 kHz
  Thus, each full 10-bit frame is sent every 1 ms, and the complete counter cycle repeats
  approximately every 1.024 s.
-RECEIVER
+RECEIVER:
  The Receiver Block monitors the incoming serial data stream and detects a fixed 9-bit
  birthday pattern (Month + Date). Each successful detection increments a counter, whose
  value is displayed once per second.– Thereceiver samples one bit per clock from the shared 10 kHz system clock. The
