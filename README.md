@@ -6,13 +6,13 @@
  detected on a seven segment display.
 
   Architecture:
- [Example:
+ Example:
  Encodes the month number (1–12)
  Encodes the date (1–31)
  Combined sequence (Month + Date)
  July = 0111
  10 = 01010
- 011101010]
+ 011101010
  The system contains two major blocks, the data generator & transmitter and the detector &
  BCDencoder. The system operates on a 10KHz clock source common for trans-receive
  blocks.
