@@ -1,5 +1,5 @@
 # 🎉 Happy Birthday – Pattern Detection System
-📘 Overview
+📘 Overview 
 
 The Happy Birthday Design Problem implements a simple yet elegant digital communication system with a Transmitter and Receiver.
 The transmitter sends a continuous bitstream, and the receiver detects your date of birth pattern within it — counting how many times it appears and displaying the count on a seven-segment display.
