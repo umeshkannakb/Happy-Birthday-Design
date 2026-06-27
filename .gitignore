@@ -1,0 +1,25 @@
+# Vivado generated files â€” do NOT commit these
+*.jou
+*.log
+*.str
+*.bit
+*.ltx
+*.mcs
+*.runs/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.gen/
+.Xil/
+
+# Vivado project file â€” regeneratable from sources, do NOT commit
+*.xpr
+
+# Waveform files
+*.vcd
+*.wdb
+
+# OS
+.DS_Store
+Thumbs.db
